@@ -1,0 +1,11 @@
+borough,room_type,listings,avg_annual_revenue,total_market_revenue_M,avg_occupied_nights
+Manhattan,Entire home/apt,1126,42766.0,48.15,122.0
+Brooklyn,Entire home/apt,1123,25499.0,28.64,117.0
+Manhattan,Private room,872,22754.0,19.84,118.0
+Queens,Entire home/apt,868,18585.0,16.13,116.0
+Brooklyn,Private room,915,13354.0,12.22,119.0
+Queens,Private room,628,9919.0,6.23,118.0
+Bronx,Entire home/apt,383,14469.0,5.54,119.0
+Staten Island,Entire home/apt,352,15369.0,5.41,119.0
+Staten Island,Private room,308,8549.0,2.63,119.0
+Bronx,Private room,319,7429.0,2.37,120.0

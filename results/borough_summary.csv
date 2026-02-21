@@ -1,0 +1,6 @@
+borough,listings,unique_hosts,avg_price,avg_availability,avg_reviews
+Brooklyn,2394,2369,164.0,179.0,11.3
+Manhattan,2302,2281,269.0,185.0,10.8
+Queens,1715,1699,122.0,182.0,11.3
+Bronx,806,802,90.0,186.0,11.2
+Staten Island,783,781,98.0,179.0,11.7
