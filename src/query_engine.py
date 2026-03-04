@@ -233,7 +233,8 @@ class QueryEngine:
         """
         return self._query(sql, {"top_n": top_n})
 
-    def run_all(self) -> dict:
+    # top_n=30 used here (vs default 20) to provide broader neighbourhood coverage in reports
+def run_all(self) -> dict:
         """Run all analytical queries and return as dict of DataFrames."""
         log.info("Running full analytical query suite...")
         results = {
