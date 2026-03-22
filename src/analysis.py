@@ -46,6 +46,7 @@ BOROUGH_COLORS = {
     "Bronx":        "#FF7F00",
 }
 
+# Side effect: modifies matplotlib.rcParams globally for the current process
 def apply_style():
     plt.rcParams.update({
         "figure.facecolor":  "white",
