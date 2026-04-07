@@ -43,6 +43,7 @@ class QueryEngine:
         Uses a window-function approach to rank within borough.
         """
         where_clause = "WHERE borough = :borough" if borough else ""
+        # CAUTION: PARTITION BY clause is built via f-string; 'borough' is Python-controlled, not user input
         sql = f"""
         WITH ranked AS (
             SELECT
