@@ -202,7 +202,11 @@ ORDER BY total_listings DESC
 
 
 def drop_and_recreate(engine, table_name: str, create_sql: str) -> None:
-    """Drop existing table and recreate from SQL statement."""
+    """Drop existing table and recreate from SQL statement.
+
+    Note: uses two separate connection contexts. A crash between DROP and CREATE
+    will leave no table. For production use wrap in a single transaction.
+    """
     with engine.connect() as conn:
         conn.execute(text(f"DROP TABLE IF EXISTS {table_name}"))
         conn.execute(text(create_sql))
