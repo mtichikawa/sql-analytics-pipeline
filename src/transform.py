@@ -75,7 +75,7 @@ FROM stg_listings_raw
 WHERE
     id IS NOT NULL
     AND price IS NOT NULL
-    AND price BETWEEN {price_min} AND {price_max}
+    AND price BETWEEN {price_min} AND {price_max}  -- values from config.py constants, not user input
     AND neighbourhood_cleansed IS NOT NULL
     AND room_type IS NOT NULL
 """.format(price_min=config.PRICE_FILTER_MIN, price_max=config.PRICE_FILTER_MAX)
