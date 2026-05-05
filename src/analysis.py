@@ -113,6 +113,7 @@ def fig_borough_comparison(qe: QueryEngine) -> str:
 # ── Fig 2: Price distribution by room type ────────────────────────────────────
 def fig_price_distribution(qe: QueryEngine) -> str:
     """Violin + box plot of price by room type."""
+    # Uses inline SQL to fetch raw rows — QueryEngine aggregates instead of returning individual prices
     from sqlalchemy import text
     with qe.engine.connect() as conn:
         df = pd.read_sql(
