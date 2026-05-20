@@ -20,6 +20,7 @@ from sqlalchemy import create_engine, text
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 import config
+from typing import Any
 
 logging.basicConfig(
     level=getattr(logging, config.LOG_LEVEL),
@@ -201,7 +202,7 @@ ORDER BY total_listings DESC
 """
 
 
-def drop_and_recreate(engine, table_name: str, create_sql: str) -> None:
+def drop_and_recreate(engine: Any, table_name: str, create_sql: str) -> None:
     """Drop existing table and recreate from SQL statement.
 
     Note: uses two separate connection contexts. A crash between DROP and CREATE
