@@ -8,9 +8,9 @@ Usage:
     python src/analysis.py
 """
 
+from pathlib import Path
 import logging
 import sys
-from pathlib import Path
 
 import matplotlib
 matplotlib.use("Agg")  # non-interactive backend for script use
