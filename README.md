@@ -174,3 +174,5 @@ dbt (data build tool) organizes SQL transforms in layers: raw → staging → ma
 
 **What was the hardest part?**
 The window function for computing price percentiles across neighborhoods while excluding outliers required several iterations to get right. SQLite doesn't support `PERCENTILE_CONT` natively, so I implemented it using Python's numpy percentile and wrote the result back to a summary table.
+
+> _Note: the default SQLite engine can be swapped to Postgres by changing the engine URL in `config.py`. All transforms are dbt-style layered SQL and run identically on either backend; test fixtures use an in-memory SQLite session._
