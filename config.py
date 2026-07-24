@@ -5,8 +5,8 @@ Defaults to SQLite for portability.
 Set USE_POSTGRES=True and fill in POSTGRES_* vars to use PostgreSQL.
 """
 
-import os
 from pathlib import Path
+import os
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
 ROOT_DIR    = Path(__file__).parent
